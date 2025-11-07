@@ -2,34 +2,28 @@ import React, { useContext, useEffect, useState } from "react";
 import { assets } from "../assets/assets_frontend/assets";
 import { NavLink, useNavigate } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
+import { ThemeContext } from "../context/ThemeContext";
 
 const Navbar = () => {
   const navigate = useNavigate();
 
-  // const { token, setToken, userData } = useContext(AppContext);
-  // change to token && userData in dropdown later 
-
-  const {token ,setToken, userData} = useContext(AppContext)
+  const { token, setToken, userData } = useContext(AppContext);
   const [showMenu, setShowMenu] = useState(false);
-  const [showDropdown, setShowDropdown] = useState(false); // added
+  const [showDropdown, setShowDropdown] = useState(false);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
-
-  const logout = () => { /*to toggle logged in or not*/
+  const logout = () => {
+    /*to toggle logged in or not*/
     setToken(false);
     localStorage.removeItem("token");
-    setShowDropdown(false); // added
+    setShowDropdown(false);
   };
 
   useEffect(() => {
-
-    if(token){
-      navigate('/')
+    if (token) {
+      navigate("/");
     }
-
-  }, [token])
-  
-
-  
+  }, [token]);
 
   return (
     <div className="flex items-center justify-between text-sm py-4 mb-5 border-b-2 border-b-fuchsia-700 ">
@@ -56,34 +50,58 @@ const Navbar = () => {
           <li className="py-1">CONTACT</li>
           <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
         </NavLink>
-        <a className="border px-2.5 py-0.5 rounded-full border-fuchsia-500 text-gray-600" href={import.meta.env.VITE_ADMIN_URL} target="_blank" rel="noopener noreferrer">
-            <li className="py-1">ADMIN/DOCTOR PORTAL</li>
-            <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
+        <a
+          className="border px-2.5 py-0.5 rounded-full border-fuchsia-500 text-gray-600"
+          href={import.meta.env.VITE_ADMIN_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <li className="py-1 text-gray-500">ADMIN/DOCTOR PORTAL</li>
+          <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
         </a>
       </ul>
       <div className="flex items-center gap-4">
+        <img
+          onClick={toggleTheme}
+          className="w-6 cursor-pointer"
+          src={theme === "light" ? assets.moon_icon : assets.sun_icon}
+          alt="theme toggle"
+        />
+
         {token && userData ? (
-          <div className="relative cursor-pointer" onClick={() => setShowDropdown(!showDropdown)}> 
-            <div className="flex items-center gap-2" > 
+          <div
+            className="relative cursor-pointer"
+            onClick={() => setShowDropdown(!showDropdown)}
+          >
+            <div className="flex items-center gap-2">
               <img className="w-8 rounded-full" src={userData.image} alt="" />
               <img className="w-2.5" src={assets.dropdown_icon} alt="" />
             </div>
-            {showDropdown && (  
-              <div className="absolute top-0 right-0 pt-14 text-base font-medium text-gray-600 z-20">
+            {showDropdown && (
+              <div className="absolute top-0 right-0 pt-14 text-base font-medium text-gray-800 z-20">
                 <div className="min-w-48 bg-stone-100 rounded flex flex-col gap-4 p-4">
                   <p
-                    onClick={() => { navigate("/my-profile"); setShowDropdown(false); }}
+                    onClick={() => {
+                      navigate("/my-profile");
+                      setShowDropdown(false);
+                    }}
                     className="hover:text-black cursor-pointer"
                   >
                     My Profile
                   </p>
                   <p
-                    onClick={() => { navigate("/my-appointments"); setShowDropdown(false); }}
+                    onClick={() => {
+                      navigate("/my-appointments");
+                      setShowDropdown(false);
+                    }}
                     className="hover:text-black cursor-pointer"
                   >
                     My Appointments
                   </p>
-                  <p onClick={logout} className="hover:text-black cursor-pointer">
+                  <p
+                    onClick={logout}
+                    className="hover:text-black cursor-pointer"
+                  >
                     Logout
                   </p>
                 </div>
@@ -132,13 +150,15 @@ const Navbar = () => {
             <NavLink onClick={() => setShowMenu(false)} to="/contact">
               <p className="px-4 py-2 rounded inline-block">CONTACT</p>
             </NavLink>
-            <a 
-              href={import.meta.env.VITE_ADMIN_URL} 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href={import.meta.env.VITE_ADMIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setShowMenu(false)}
             >
-              <p className="px-4 py-2 rounded inline-block">ADMIN/DOCTOR PORTAL</p>
+              <p className="px-4 py-2 rounded inline-block">
+                ADMIN/DOCTOR PORTAL
+              </p>
             </a>
           </ul>
         </div>

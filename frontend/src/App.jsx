@@ -13,12 +13,18 @@ import Footer from './components/Footer'
 import Privacy from './pages/Privacy'
 import ScrollToTop from './components/ScrollToTop'
 import { ToastContainer, toast } from 'react-toastify';
+import { useContext, useEffect } from 'react';
+import { ThemeContext } from './context/ThemeContext'
 
 
 
 const App = () => {
 
+ const {theme} = useContext(ThemeContext);
 
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
 
   return (
     <div className='mx-4 sm:mx-[10%]'>

@@ -4,7 +4,7 @@ import { assets } from '../assets/assets_frontend/assets'
 const Contacts = () => {
     return (
         <div>
-            <div className="text-center text-2xl pt-10 text-gray-600">
+            <div className="text-center text-2xl pt-10 text-gray-500">
         <p>
           CONTACT <span className="text-fuchsia-700 font-semibold">US</span>
         </p>
@@ -19,16 +19,16 @@ const Contacts = () => {
 
         <div className="flex flex-col justify-center items-start gap-6">
           <p className="font-semibold text-lg text-fuchsia-700">OUR OFFICE</p>
-          <p className="text-gray-600">
+          <p className="text-gray-500">
             54709 Willms Station <br /> Suite 350, Washington, USA
           </p>
-          <p className="text-gray-600">
+          <p className="text-gray-500">
             Tel: (415) 555‑0132 <br /> Email: elyseniyibizi502@gmail.com
           </p>
           <p className="font-semibold text-lg text-fuchsia-700">
             CAREERS AT PRESCRIPTO
           </p>
-          <p className="text-gray-600">
+          <p className="text-gray-500">
             Learn more about our teams and job openings.
           </p>
           <button className="border border-primary px-8 py-4 text-sm hover:bg-primary text-fuchsia-700 hover:text-white transition-all duration-500">

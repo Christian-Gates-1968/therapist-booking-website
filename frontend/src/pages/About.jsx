@@ -4,7 +4,7 @@ import { assets } from "../assets/assets_frontend/assets";
 const About = () => {
   return (
     <div>
-      <div className="text-center text-2xl pt-10 text-gray-600">
+      <div className="text-center text-2xl pt-10 text-gray-500">
         <p>
           ABOUT <span className="text-fuchsia-700 font-medium">US</span>
         </p>
@@ -17,7 +17,7 @@ const About = () => {
           alt="About Us"
         />
 
-        <div className="flex flex-col justify-center gap-6 md:w-2/4 text-sm text-gray-600">
+        <div className="flex flex-col justify-center gap-6 md:w-2/4 text-sm text-gray-500">
           <p>
             Welcome to Therapy Co, your trusted partner in managing your
             healthcare needs conveniently and efficiently. At Therapy Co, we
@@ -44,7 +44,7 @@ const About = () => {
       </div>
 
       <div className="text-xl my-4">
-        <p className="text-gray-600">
+        <p className="text-gray-500">
           WHY <span className="text-fuchsia-700 font-semibold">CHOOSE US</span>
         </p>
       </div>
@@ -55,7 +55,7 @@ const About = () => {
             Efficiency
           </h3>
 
-          <p class="text-base md:text-lg text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+          <p class="text-base md:text-lg text-gray-500 group-hover:text-gray-700 transition-colors duration-300">
             Streamlined appointment scheduling that fits into your busy
             lifestyle.
           </p>
@@ -66,7 +66,7 @@ const About = () => {
             Convenience
           </h3>
 
-          <p class="text-base md:text-lg text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+          <p class="text-base md:text-lg text-gray-500 group-hover:text-gray-700 transition-colors duration-300">
             Access to a network of trusted healthcare professionals in your
             area.
           </p>
@@ -77,7 +77,7 @@ const About = () => {
             Personalization
           </h3>
 
-          <p class="text-base md:text-lg text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+          <p class="text-base md:text-lg text-gray-500 group-hover:text-gray-700 transition-colors duration-300">
             Tailored recommendations and reminders to help you stay on top of
             your health.
           </p>

@@ -1,36 +1,54 @@
-import React from 'react'
-import {assets} from '../assets/assets_admin/assets'
-import {AdminContext} from '../context/AdminContext'
-import { useContext} from 'react'
+import React from "react";
+import { assets } from "../assets/assets_admin/assets";
+import { AdminContext } from "../context/AdminContext";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { DoctorContext } from '../context/DoctorContext';
-
-
+import { DoctorContext } from "../context/DoctorContext";
+import { ThemeContext } from "../context/ThemeContext";
 
 const Navbar = () => {
-    const { aToken, setAToken } = useContext(AdminContext);
-    const { dToken, setDToken } = useContext(DoctorContext);
+  const { aToken, setAToken } = useContext(AdminContext);
+  const { dToken, setDToken } = useContext(DoctorContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
-    const navigate = useNavigate(); 
-    
-    const logout = () => {
-        navigate("/");
-        aToken && setAToken("");
-        aToken && localStorage.removeItem("aToken");
-        dToken && setDToken("");
-        dToken && localStorage.removeItem("dToken");
+  const navigate = useNavigate();
+
+  const logout = () => {
+    navigate("/");
+    aToken && setAToken("");
+    aToken && localStorage.removeItem("aToken");
+    dToken && setDToken("");
+    dToken && localStorage.removeItem("dToken");
   };
 
-    return (
-        <div className='flex justify-between items-center px-4 sm:px-10 py-3 border-b bg-white'>
-            <div className="flex items-center gap-2 text-xs">
-                <img className="w-36 sm::w-40 cursor-pointer" src={assets.admin_logo} alt="Logo" />
-                <p className="border px-2.5 py-0.5 rounded-full border-fuchsia-500 text-gray-600">{aToken? 'Admin':'Doctor'}</p>
-            </div>
-            <button onClick={logout} className="bg-primary text-white text-sm px-10 py-2 rounded-full">Logout</button>
-        </div>
-    
-  )
-}
+  return (
+    <div className="flex justify-between items-center px-4 sm:px-10 py-3 border-b bg-white">
+      <div className="flex items-center gap-2 text-xs">
+        <img
+          className="w-36 sm::w-40 cursor-pointer"
+          src={assets.admin_logo}
+          alt="Logo"
+        />
+        <p className="border px-2.5 py-0.5 rounded-full border-fuchsia-500 text-gray-600">
+          {aToken ? "Admin" : "Doctor"}
+        </p>
+      </div>
+      <div className="flex items-center gap-4">
+        <img
+          onClick={toggleTheme}
+          className="w-6 cursor-pointer"
+          src={theme === "light" ? assets.moon_icon : assets.sun_icon}
+          alt="theme toggle"
+        />
+        <button
+          onClick={logout}
+          className="bg-primary text-white text-sm px-10 py-2 rounded-full"
+        >
+          Logout
+        </button>
+      </div>
+    </div>
+  );
+};
 
-export default Navbar
+export default Navbar;

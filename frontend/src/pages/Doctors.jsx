@@ -39,7 +39,7 @@ const Doctors = () => {
 
         {/* Filters */}
         <div
-          className={`flex-col gap-4 text-sm text-gray-600 ${
+          className={`flex-col gap-4 text-sm text-gray-500 ${
             showFilter ? "flex" : "hidden sm:flex"
           }`}
         >

@@ -173,7 +173,7 @@ const Appointment = () => {
             {docInfo.name} 
             <img className='w-5' src={assets.verified_icon} alt="verified icon" /> 
             </p>
-            <div className='flex items-center gap-2 text-sm mt-1 text-gray-600'>
+            <div className='flex items-center gap-2 text-sm mt-1 text-gray-500'>
               <p>
                 {docInfo.degree} - {docInfo.speciality}
                 <button className=" py-0.5 px-2 ml-2 border text-xs rounded-full">
@@ -201,7 +201,7 @@ const Appointment = () => {
       
     {/* Display available slots */}
 
-    <div className='sm:ml-72 sm:pl-4 mt-4 font-medium text-gray-700'>
+    <div className='sm:ml-72 sm:pl-4 mt-4 font-medium text-gray-500'>
       <p>Booking Slots</p>
       <div className='flex gap-3 items-center w-full overflow-x-scroll mt-4'>
         {
@@ -239,7 +239,7 @@ const Appointment = () => {
                 className={`text-sm font-light flex-shrink-0 px-5 py-2 mb-1 rounded-full cursor-pointer ${
                     item.time === slotTime
                       ? "bg-primary text-white"
-                      : "text-gray-400 border border-gray-300"
+                      : "text-gray-500 border border-gray-300"
                   }`}
             >
                 {item.time.toLowerCase()}

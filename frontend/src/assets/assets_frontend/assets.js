@@ -13,7 +13,6 @@ import verified_icon from './verified_icon.svg'
 import arrow_icon from './arrow_icon.svg'
 import info_icon from './info_icon.svg'
 import upload_icon from './upload_icon.png'
-import razorpay_logo from './razorpay_logo.png'
 import doc1 from './doc1.png'
 import doc2 from './doc2.png'
 import doc3 from './doc3.png'
@@ -29,6 +28,9 @@ import doc12 from './doc12.png'
 import doc13 from './doc13.png'
 import doc14 from './doc14.png'
 import doc15 from './doc15.png'
+import sun_icon from './sun.png'
+import moon_icon from './moon.png'
+
 
 
 import career_counsellor from "./career_counsellor.png"
@@ -59,7 +61,8 @@ export const assets = {
     cross_icon,
     dropdown_icon,
     upload_icon,
-    razorpay_logo
+    sun_icon,
+    moon_icon
 }
 
 export const specialityData = [

@@ -20,7 +20,7 @@ const AllAppointments = () => {
       <p className="mb-3 text-lg font-medium">All Appointments</p>
 
       <div className="bg-white border rounded text-sm max-h-[80vh] overflow-y-scroll">
-        <div className="hidden sm:grid grid-cols-[0.5fr_3fr_1fr_3fr_3fr_1fr_1fr] grid-flow-col text-fuchsia-900 py-3 px-6 border-b">
+        <div className="hidden sm:grid grid-cols-[0.5fr_3fr_1fr_3fr_3fr_1fr_1fr] grid-flow-col text-fuchsia-700 py-3 px-6 border-b">
           <p>#</p>
           <p>Patient</p>
           <p>Age</p>
@@ -31,7 +31,7 @@ const AllAppointments = () => {
         </div>
         {appointments.map((item, index) => (
           <div
-            className="flex flex-wrap justify-between max-sm:gap-2 sm:grid sm:grid-cols-[0.5fr_3fr_1fr_3fr_3fr_1fr_1fr] items-center text-gray-500 py-3 px-6 border-b hover:bg-gray-50"
+            className="flex flex-wrap justify-between max-sm:gap-2 sm:grid sm:grid-cols-[0.5fr_3fr_1fr_3fr_3fr_1fr_1fr] items-center text-fuchsia-600 py-3 px-6 border-b hover:bg-fuchsia-50"
             key={index}
           >
             <p className="max-sm:hidden">{index + 1}</p>
@@ -50,7 +50,7 @@ const AllAppointments = () => {
             <div className="flex items-center gap-2">
               <img
                 src={item.docData.image}
-                className="w-8 rounded-full bg-gray-200"
+                className="w-8 rounded-full bg-fuchsia-200"
                 alt=""
               />{" "}
               <p>{item.docData.name}</p>

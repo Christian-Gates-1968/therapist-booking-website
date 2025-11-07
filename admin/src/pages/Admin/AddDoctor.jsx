@@ -84,9 +84,9 @@ const AddDoctor = () => {
       <p className="mb-3 text-lg font-medium">Add Doctor</p>
       <div className="bg-fuchsia-50 px-8 py-8 border rounded w-full max-w-4xl max-h-[80vh] overflow-y-scroll ">
         
-        <div className="flex items-center gap-4 mb-8 text-gray-500">
+        <div className="flex items-center gap-4 mb-8 text-fuchsia-500">
           <label htmlFor="doc-img">
-            <img className="w-16 bg-gray-100 rounded-full cursor-pointer" src={docImg? URL.createObjectURL(docImg):assets.upload_area} alt="" />
+            <img className="w-16 bg-fuchsia-100 rounded-full cursor-pointer" src={docImg? URL.createObjectURL(docImg):assets.upload_area} alt="" />
           </label>
           <input onChange={(e)=> SetDocImg(e.target.files[0])} type="file" id="doc-img" hidden></input>
           <p>
@@ -94,7 +94,7 @@ const AddDoctor = () => {
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-start gap-10 text-gray-600">
+        <div className="flex flex-col lg:flex-row items-start gap-10 text-fuchsia-600">
           <div className="w-full lg:flex-1 flex flex-col gap-4">
 
             <div className="flex-1 flex flex-col gap-1">
@@ -221,7 +221,7 @@ const AddDoctor = () => {
         </div>
 
         <div>
-          <p className="mt-4 mb-2">About Doctor</p>
+          <p className="mt-4 mb-2 text-fuchsia-600">About Doctor</p>
           <textarea
             onChange={(e) => SetAbout(e.target.value)}
             value={about}

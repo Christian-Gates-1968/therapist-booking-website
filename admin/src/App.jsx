@@ -16,15 +16,22 @@ import DoctorsList from "./pages/Admin/DoctorsList";
 import DoctorDashboard from './pages/Doctor/DoctorDashboard'
 import DoctorAppointments from './pages/Doctor/DoctorAppointments'
 import DoctorProfile from './pages/Doctor/DoctorProfile'
+import { ThemeContext } from './context/ThemeContext'
+import { useEffect } from 'react';
 
 
 const App = () => {
 
   const{aToken} = useContext(AdminContext)
   const{dToken} = useContext(DoctorContext)
+  const {theme} = useContext(ThemeContext);
+
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
 
   return aToken || dToken ? (
-    <div className='bg-[#F8F9FD] ' >
+    <div  >
       <ToastContainer/>
       <Navbar />
       <div className="flex items-start">

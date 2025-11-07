@@ -13,7 +13,7 @@ const Footer = () => {
         {/* ---------- Left Section ---------- */}
         <div>
           <Link to="/"><img className="mb-5 w-40" src={assets.logo} alt="logo" /></Link>
-          <p className="w-full md:w-2/3 text-gray-600 leading-6">
+          <p className="w-full md:w-2/3 text-gray-500 leading-6">
             {" "}
             Therapy Co connects individuals with trusted therapists and wellness professionals, making mental health care accessible, personalized, and compassionate.{" "}
           </p>
@@ -22,7 +22,7 @@ const Footer = () => {
         {/* ---------- Center Section ---------- */}
         <div>
           <p className="text-xl text-fuchsia-700 font-medium mb-5">COMPANY</p>
-          <ul className="flex flex-col gap-2 text-gray-600">
+          <ul className="flex flex-col gap-2 text-gray-500">
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -43,7 +43,7 @@ const Footer = () => {
           <p className=" text-xl text-fuchsia-700 font-medium mb-5">
             GET IN TOUCH
           </p>
-          <ul className=" flex flex-col gap-2 text-gray-600">
+          <ul className=" flex flex-col gap-2 text-gray-500">
             <li>+91 12345 67891</li>
             <li>info@company.com</li>
           </ul>
