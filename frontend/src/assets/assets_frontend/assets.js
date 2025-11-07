@@ -72,19 +72,19 @@ export const specialityData = [
         image: psychiatrist
     },
     {
-        speciality: 'Relationship / Marriage Counsellor',
+        speciality: 'Relationship and Marriage Counsellor',
         image: relationship_and_marriage_counsellor
     },
     {
-        speciality: 'Child & Adolescent Counsellor',
+        speciality: 'Child and Adolescent Counsellor',
         image: child_and_adolescent_counsellor
     },
     {
-        speciality: 'Trauma / Abuse Counsellor',
+        speciality: 'Trauma and Abuse Counsellor',
         image: trauma_and_abuse_counsellor
     },
     {
-        speciality: 'Anxiety & Depression Specialist',
+        speciality: 'Anxiety and Depression Specialist',
         image: anxiety_and_depression_specialist
     },
     {

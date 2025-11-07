@@ -51,10 +51,10 @@ const PrescriptionModal = ({ appointmentId, onSave, onCancel }) => {
           />
         </div>
 
-        <div className="flex mt-4 justify-end gap-3 mt-6">
+        <div className="flex mt-4 justify-end gap-3">
           <button
             onClick={onCancel}
-            className="py-2 px-4 border rounded-lg text-gray-700 hover:bg-gray-100"
+            className="py-2 px-4 border rounded-lg text-gray-700 hover:bg-red-100"
           >
             Cancel
           </button>

@@ -80,9 +80,9 @@ const AddDoctor = () => {
 
 
   return (
-    <form onSubmit={onSubmitHandler} className="m-5 w-full" >
+    <form onSubmit={onSubmitHandler} className="m-5 w-full " >
       <p className="mb-3 text-lg font-medium">Add Doctor</p>
-      <div className="bg-white px-8 py-8 border rounded w-full max-w-4xl max-h-[80vh] overflow-y-scroll">
+      <div className="bg-fuchsia-50 px-8 py-8 border rounded w-full max-w-4xl max-h-[80vh] overflow-y-scroll ">
         
         <div className="flex items-center gap-4 mb-8 text-gray-500">
           <label htmlFor="doc-img">
@@ -174,12 +174,15 @@ const AddDoctor = () => {
                 name=""
                 id=""
               >
-                <option value="General physician">General physician</option>
-                <option value="Gynecologist">Gynecologist</option>
-                <option value="Dermatologist">Dermatologist</option>
-                <option value="Pediatricians">Pediatricians</option>
-                <option value="Neurologist">Neurologist</option>
-                <option value="Gastroenterologist">Gastroenterologist</option>
+
+                <option value="Clinical Psychologist">Clinical Psychologist</option>
+                <option value="Psychiatrist">Psychiatrist</option>
+                <option value="Relationship and Marriage Counsellor">Relationship and Marriage Counsellor</option>
+                <option value="Child and Adolescent Counsellor">Child and Adolescent Counsellor</option>
+                <option value="Trauma and Abuse Counsellor">Trauma and Abuse Counsellor</option>
+                <option value="Anxiety and Depression Specialist">Anxiety and Depression Specialist</option>
+                <option value="Career Counsellor">Career Counsellor</option>
+
               </select>
             </div>
 
