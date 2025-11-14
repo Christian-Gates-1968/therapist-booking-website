@@ -11,9 +11,15 @@ const MyProfile = () => {
   const [isEdit, setIsEdit] = useState(false);
   const [image, setImage] = useState(false);
 
-  const formattedDob = userData.dob
-    ? new Date(userData.dob).toISOString().split("T")[0]
-    : "";
+  const formattedDob = (() => {
+  if (!userData?.dob) return "";
+
+  const d = new Date(userData.dob);
+  if (isNaN(d.getTime())) return ""; // invalid date -> avoid crash
+
+  return d.toISOString().split("T")[0];
+})();
+
 
   const updateUserProfileData = async () => {
     try {
