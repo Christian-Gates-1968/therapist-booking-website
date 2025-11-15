@@ -15,7 +15,7 @@ const MyProfile = () => {
   if (!userData?.dob) return "";
 
   const d = new Date(userData.dob);
-  if (isNaN(d.getTime())) return ""; // invalid date -> avoid crash
+  if (isNaN(d.getTime())) return ""; 
 
   return d.toISOString().split("T")[0];
 })();

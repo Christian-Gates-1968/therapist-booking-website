@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  # 1. Node.js Express Backend Service
+  backend:
+    build:
+      context: ./backend # Path to backend's Dockerfile
+      dockerfile: Dockerfile
+    container_name: mental-health-backend
+    restart: always
+    # Map container port 4000 to host port 4000
+    ports:
+      - "4000:4000"
+    
+    # This securely injects your local ./backend/.env file
+    env_file:
+      - ./backend/.env
+
+  # 2. React Frontend Service (User-facing site)
+  frontend:
+    build:
+      context: ./frontend # Path to frontend's Dockerfile
+      dockerfile: Dockerfile
+    container_name: mental-health-frontend
+    restart: always
+    # Map host port 3000 to the container's Nginx port 80
+    ports:
+      - "3000:80"
+
+  # 3. React Admin Panel Service
+  admin:
+    build:
+      context: ./admin # Path to admin's Dockerfile
+      dockerfile: Dockerfile
+    container_name: mental-health-admin
+    restart: always
+    # Map host port 3001 to the container's Nginx port 80
+    ports:
+      - "3001:80"

@@ -1,0 +1,7 @@
+node_modules
+
+dist
+
+# Exclude git files
+.git
+.gitignore
