@@ -98,6 +98,7 @@ export const specialityData = [
 
 export const doctors = [
     {
+        //Doctor@1
         _id: 'doc1',
         name: 'Dr. Richard James',
         image: doc1,
@@ -112,6 +113,7 @@ export const doctors = [
         }
     },
     {
+        //password: doctor2
         _id: 'doc2',
         name: 'Dr. Emily Larson',
         image: doc2,
@@ -126,6 +128,7 @@ export const doctors = [
         }
     },
     {
+        //Doctor@3
         _id: 'doc3',
         name: 'Dr. Saransh Patel',
         image: doc3,
@@ -140,6 +143,7 @@ export const doctors = [
         }
     },
     {
+        //Doctor@4
         _id: 'doc4',
         name: 'Dr. Christopher Lee',
         image: doc4,
