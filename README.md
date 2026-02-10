@@ -1,22 +1,20 @@
 # **Therapy Co — AI-Powered Therapy & Appointment Platform** 🧠💙
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=react,nodejs,express,mongodb,tailwind,docker,figma" />
-</p>
+ <p align="center">
 
-<p align="center">
-  <b>The Therapy Co. Core</b><br>
-  <i>Advanced Mental Health Orchestration</i>
-</p>
+  <img src="https://img.shields.io/badge/React-18.3-blue?logo=react" alt="React"/>
 
-<div align="center">
+  <img src="https://img.shields.io/badge/Node.js-Express-green?logo=node.js" alt="Node.js"/>
 
-| **Intelligence** | **Streaming** | **Deployment** |
-| :--- | :--- | :--- |
-| Gemini 1.5 Pro | WebRTC / Socket.io | Docker & CI/CD |
-| Natural Language Triage | Real-time Consultation | Cloudinary Asset Management |
+  <img src="https://img.shields.io/badge/MongoDB-Database-green?logo=mongodb" alt="MongoDB"/>
 
-</div>
+  <img src="https://img.shields.io/badge/WebRTC-Video-orange?logo=webrtc" alt="WebRTC"/>
+
+  <img src="https://img.shields.io/badge/AI-Gemini-purple?logo=google" alt="Gemini AI"/>
+
+  <img src="https://img.shields.io/badge/License-MIT-yellow" alt="License"/>
+
+</p> 
 A **production-ready, full-stack healthcare platform** for booking therapy appointments with real-time video consultations, AI assistance, and comprehensive patient management.
 
 ## **🚀 Key Features**
