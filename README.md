@@ -127,34 +127,18 @@ A **production-ready, full-stack healthcare platform** for booking therapy appoi
 ### **📹 Real-Time Video Consultations**
 
 **Incoming Consultation Request (Doctor Side)**
-![Incoming Request](screenshots/incoming-request-doctor.png)
-*Doctors can accept, decline, or schedule consultations for later*
+> Doctors can accept, decline, or schedule consultations for later with instant or scheduled options
 
 **Active Video Call**
-![Video Call](screenshots/video-call-active.png)
-*WebRTC-based secure video consultations with screen controls*
+> WebRTC-based secure video consultations with screen controls and real-time communication
 
 ### **🗓️ Appointment Management**
 
-**Patient Appointments Dashboard**
-![Patient Appointments](screenshots/patient-appointments-with-join-button.png)
-*Patients can view appointments, join video calls, and see scheduled consultations*
-
-**Scheduled Consultations**
-![Scheduled Consultations](screenshots/scheduled-consultations.png)
-*Clear visibility of upcoming scheduled appointments with date/time and quick actions*
+> Patients can view appointments, join video calls, and see scheduled consultations with clear visibility of upcoming appointments including date/time and quick action buttons
 
 ### **📋 Digital Prescriptions**
 
-**Doctor Writing Prescription**
-
-![Doctor Prescription Modal](screenshots/prescription-modal-doctor.png)
-
-**Patient Viewing Prescription**
-
-![Prescription View](screenshots/prescription-view-patient.png)
-
-*Secure digital prescription system - doctors can issue, patients can view*
+> Secure digital prescription system where doctors can issue prescriptions upon appointment completion and patients can view their prescriptions anytime from their appointment history
 
 ### **💊 Online Pharmacy Store**
 
@@ -164,13 +148,7 @@ A **production-ready, full-stack healthcare platform** for booking therapy appoi
 
 *Browse psychological medicines with search and category filters*
 
-**Medicine Details**
-
-![Medicine Detail](screenshots/medicine-detail.png)
-
-**Shopping Cart**
-
-![Shopping Cart](screenshots/shopping-cart.png)
+*Individual medicine pages with detailed information, usage instructions, and side effects. Integrated shopping cart for easy checkout.*
 
 ### **👨‍⚕️ Admin & Doctor Panel**
 
@@ -179,19 +157,15 @@ A **production-ready, full-stack healthcare platform** for booking therapy appoi
 *Statistics overview, revenue tracking, and appointment management*
 
 **Doctor Appointments View**
-![Doctor Appointments](screenshots/doctor-appointments.png)
-*Manage appointments, join video calls, and issue prescriptions*
+> Manage appointments, join video calls, and issue prescriptions with comprehensive patient information
 
 ### **📧 Automated Email Reminders**
 ![Email Reminder](screenshots/email-reminder.png)
 *Styled HTML emails sent 12 hours before appointments*
 
 ### **📱 Mobile Responsive**
-<p align="center">
-  <img src="screenshots/mobile-home.png" alt="Mobile Home" width="250"/>
-  <img src="screenshots/mobile-chat.png" alt="Mobile Chat" width="250"/>
-  <img src="screenshots/mobile-appointments.png" alt="Mobile Appointments" width="250"/>
-</p>
+
+> Fully responsive design that works seamlessly on mobile devices - homepage, chatbot, and appointment management all optimized for smaller screens
 
 ---
 
