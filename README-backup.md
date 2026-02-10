@@ -26,17 +26,92 @@ A **production-ready, full-stack healthcare platform** for booking therapy appoi
 
 ---
 
+## **📋 Table of Contents**
 
-## **🛠 Tech Stack**
-
-**Frontend:** React 18 + Vite • Tailwind CSS • Socket.io • WebRTC  
-**Backend:** Node.js + Express • MongoDB • JWT • Nodemailer  
-**Integrations:** Google Gemini AI • Razorpay • Cloudinary  
+- [Screenshots & Features](#-screenshots--features)
+- [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure-overview)
+- [Getting Started](#-quick-start)
+- [Environment Variables](#-environment-variables)
+- [Features Documentation](#feature-details)
+  - [AI Chatbot](#-ai-chatbot-gemini)
+  - [Video Consultations](#-video-consultations)
+  - [Email Reminders](#-email-reminder-service)
+  - [Prescription System](#-prescription-system)
+  - [Pharmacy Store](#pharmacy-store)
+- [Production Deployment](#-production-deployment)
+- [Docker Support](#-docker-support)
+- [License](#-license)
 
 ---
 
+## **🛠 Tech Stack**
 
-## **📸 Screenshots & Features**
+### **Frontend**
+- React 18.3 with Vite
+- React Router DOM
+- Context API for state management
+- Tailwind CSS
+- Axios
+- Socket.io Client
+- Simple-peer (WebRTC)
+- React Toastify
+
+### **Backend**
+- Node.js + Express
+- MongoDB + Mongoose
+- Socket.io (WebRTC signaling)
+- JWT Authentication
+- Nodemailer (Email service)
+- Node-cron (Scheduled jobs)
+- Cloudinary (Image uploads)
+- Razorpay (Payments)
+- Google Gemini API (AI chatbot)
+- Bcrypt (Password hashing)
+
+### **DevOps**
+- Docker & Docker Compose
+- Git version control
+- Environment-based configuration
+
+---
+
+## **✨ Highlights**
+
+### **Frontend (User Site – React + Vite)**
+
+* SPA built with React + Vite
+* Context-driven state management
+* Doctor listings, appointment booking, payments
+* **Medicines store with cart functionality**
+* **View prescriptions from completed appointments**
+* **Video call integration for remote consultations**
+* Tailwind CSS design system
+* Entry: `frontend/src/App.jsx`
+* Vite config: `frontend/vite.config.js`
+
+### **Admin / Doctor Portal (React + Vite)**
+
+* Role-based dashboard for doctors & admins
+* Manage appointments, schedules, doctor profiles
+* **Issue prescriptions upon appointment completion**
+* **Video consultation room for doctors**
+* Entry: `admin/src/App.jsx`
+
+### **Backend (Node + Express + MongoDB)**
+
+* REST API with authentication
+* JSON Web Tokens (JWT)
+* Payment integration (Razorpay)
+* Image uploads (Cloudinary)
+* **Email reminder service (Nodemailer + node-cron)**
+* **WebRTC signaling via Socket.io**
+* Optional chatbot route (Gemini API)
+* Entry: `backend/server.js`
+
+---
+
+## **� Screenshots & Features**
 
 ### **🏠 Homepage & Landing**
 ![Homepage](screenshots/homepage.png)
