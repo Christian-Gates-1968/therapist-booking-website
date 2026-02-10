@@ -8,9 +8,13 @@ import Contacts from './pages/Contacts'
 import MyProfile from './pages/MyProfile'
 import MyAppointments from './pages/MyAppointments'
 import Appointment from './pages/Appointment'
+import VideoRoom from './pages/VideoRoom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Privacy from './pages/Privacy'
+import Medicines from './pages/Medicines'
+import MedicineDetail from './pages/MedicineDetail'
+import Cart from './pages/Cart'
 import ScrollToTop from './components/ScrollToTop'
 import { ToastContainer, toast } from 'react-toastify';
 import { useContext, useEffect } from 'react';
@@ -47,7 +51,11 @@ const App = () => {
         <Route path='/my-profile' element={<MyProfile />} />
         <Route path='/my-appointments' element={<MyAppointments />} />
         <Route path='/appointment/:docId' element={<Appointment />} />
+        <Route path='/video-call/:appointmentId' element={<VideoRoom />} />
         <Route path='/privacy' element={<Privacy />} />
+        <Route path='/medicines' element={<Medicines />} />
+        <Route path='/medicine/:medId' element={<MedicineDetail />} />
+        <Route path='/cart' element={<Cart />} />
       </Routes>
 
       <Footer/>

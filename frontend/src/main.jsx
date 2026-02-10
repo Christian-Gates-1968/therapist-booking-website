@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 import AppContextProvider from './context/AppContext.jsx'
 import ThemeContextProvider from './context/ThemeContext.jsx'
 import { ChatbotContextProvider } from './context/ChatbotContext.jsx'
+import CartContextProvider from './context/CartContext.jsx'
 
 
 
@@ -15,7 +16,9 @@ createRoot(document.getElementById('root')).render(
     <AppContextProvider>
       <ThemeContextProvider>
         <ChatbotContextProvider>
-          <App />
+          <CartContextProvider>
+            <App />
+          </CartContextProvider>
         </ChatbotContextProvider>
       </ThemeContextProvider>
     </AppContextProvider>

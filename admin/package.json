@@ -12,11 +12,16 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.16",
     "axios": "^1.12.2",
+    "events": "^3.3.0",
+    "lucide-react": "^0.563.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.4",
     "react-toastify": "^11.0.5",
-    "tailwindcss": "^4.1.16"
+    "simple-peer": "^9.11.1",
+    "socket.io-client": "^4.8.3",
+    "tailwindcss": "^4.1.16",
+    "util": "^0.12.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",

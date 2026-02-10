@@ -1,14 +1,35 @@
 import React from 'react'
 import { useContext } from 'react'
 import { useEffect } from 'react'
+import { useState } from 'react'
 import { DoctorContext } from '../../context/DoctorContext'
 import { assets } from '../../assets/assets_admin/assets'
 import { AppContext } from '../../context/AppContext'
+import PrescriptionModal from '../../components/PrescriptionModal'
 
 const DoctorDashboard = () => {
 
   const { dToken, dashData, getDashData, cancelAppointment, completeAppointment } = useContext(DoctorContext)
   const { slotDateFormat, currency } = useContext(AppContext)
+
+  const [showModal, setShowModal] = useState(false)
+  const [selectedAppointment, setSelectedAppointment] = useState(null)
+
+  const handleOpenModal = (appointment) => {
+    setSelectedAppointment(appointment)
+    setShowModal(true)
+  }
+
+  const handleCloseModal = () => {
+    setShowModal(false)
+    setSelectedAppointment(null)
+  }
+
+  const handleSavePrescription = (appointmentId, prescription) => {
+    completeAppointment(appointmentId, prescription)
+    handleCloseModal()
+    getDashData()
+  }
 
 
   useEffect(() => {
@@ -65,13 +86,21 @@ const DoctorDashboard = () => {
                   ? <p className='text-green-500 text-xs font-medium'>Completed</p>
                   : <div className='flex'>
                     <img onClick={() => cancelAppointment(item._id)} className='w-10 cursor-pointer' src={assets.cancel_icon} alt="" />
-                    <img onClick={() => completeAppointment(item._id)} className='w-10 cursor-pointer' src={assets.tick_icon} alt="" />
+                    <img onClick={() => handleOpenModal(item)} className='w-10 cursor-pointer' src={assets.tick_icon} alt="" />
                   </div>
               }
             </div>
           ))}
         </div>
       </div>
+
+      {showModal && (
+        <PrescriptionModal
+          appointmentId={selectedAppointment._id}
+          onSave={handleSavePrescription}
+          onCancel={handleCloseModal}
+        />
+      )}
 
     </div>
   )

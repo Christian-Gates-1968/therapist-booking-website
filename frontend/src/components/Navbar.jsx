@@ -3,6 +3,7 @@ import { assets } from "../assets/assets_frontend/assets";
 import { NavLink, useNavigate } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
 import { ThemeContext } from "../context/ThemeContext";
+import { CartContext } from "../context/CartContext";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -11,6 +12,7 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
   const { theme, toggleTheme } = useContext(ThemeContext);
+  const { cartCount } = useContext(CartContext);
 
   const logout = () => {
     /* to toggle logged in or not */
@@ -50,6 +52,10 @@ const Navbar = () => {
           <li className="py-1">CONTACT</li>
           <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
         </NavLink>
+        <NavLink to="/medicines">
+          <li className="py-1">MEDICINES</li>
+          <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
+        </NavLink>
         <a
           className="border px-2.5 py-0.5 rounded-full border-fuchsia-500 text-gray-600"
           href={import.meta.env.VITE_ADMIN_URL}
@@ -67,6 +73,17 @@ const Navbar = () => {
           src={theme === "light" ? assets.moon_icon : assets.sun_icon}
           alt="theme toggle"
         />
+        <div
+          onClick={() => navigate("/cart")}
+          className="relative cursor-pointer"
+        >
+          <span className="text-xl">🛒</span>
+          {cartCount > 0 && (
+            <span className="absolute -top-2 -right-2 bg-fuchsia-600 text-white text-[10px] w-5 h-5 flex items-center justify-center rounded-full">
+              {cartCount}
+            </span>
+          )}
+        </div>
 
         {token && userData ? (
           <div
@@ -149,6 +166,9 @@ const Navbar = () => {
             </NavLink>
             <NavLink onClick={() => setShowMenu(false)} to="/contact">
               <p className="px-4 py-2 rounded inline-block">CONTACT</p>
+            </NavLink>
+            <NavLink onClick={() => setShowMenu(false)} to="/medicines">
+              <p className="px-4 py-2 rounded inline-block">MEDICINES</p>
             </NavLink>
             <a
               href={import.meta.env.VITE_ADMIN_URL}

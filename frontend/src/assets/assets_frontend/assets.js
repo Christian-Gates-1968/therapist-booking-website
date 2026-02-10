@@ -128,7 +128,7 @@ export const doctors = [
         }
     },
     {
-        //Doctor@3
+        //Doctor@3 
         _id: 'doc3',
         name: 'Dr. Saransh Patel',
         image: doc3,

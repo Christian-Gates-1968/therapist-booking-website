@@ -8,7 +8,7 @@ import { ThemeContext } from "../context/ThemeContext";
 
 const Navbar = () => {
   const { aToken, setAToken } = useContext(AdminContext);
-  const { dToken, setDToken } = useContext(DoctorContext);
+  const { dToken, setDToken, profileData } = useContext(DoctorContext);
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   const navigate = useNavigate();
@@ -32,6 +32,16 @@ const Navbar = () => {
         <p className="border px-2.5 py-0.5 rounded-full border-fuchsia-500 text-gray-600">
           {aToken ? "Admin" : "Doctor"}
         </p>
+        {dToken && profileData && (
+          <p className="text-gray-700 font-medium ml-2">
+            {profileData.name}
+          </p>
+        )}
+        {aToken && (
+          <p className="text-gray-700 font-medium ml-2">
+            Administrator
+          </p>
+        )}
       </div>
       <div className="flex items-center gap-4">
         <img
